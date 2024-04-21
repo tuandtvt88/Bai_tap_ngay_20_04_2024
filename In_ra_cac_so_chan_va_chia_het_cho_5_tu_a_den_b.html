@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2>In ra tích các số chẵn và chia hết cho 5 từ a đến b</h2>
+<input type="number" id="a" placeholder="Nhập a"><br><br>
+<input type="number" id="b" placeholder="Nhập b"><br><br>
+<button onclick="ketqua()">Kết quả</button>
+<p id="kq"></p>
+<script>
+    function ketqua(){
+        let a =+document.getElementById('a').value;
+        let b =+document.getElementById('b').value;
+        let tich =1;
+        document.getElementById('kq').innerHTML ='' ;//Xóa kết quả cũ đi
+        for (let i =a;i<=b;i++){
+            if(i%2==0 && i%5==0){
+                tich =tich*i;
+            }
+        }
+        document.getElementById('kq').innerHTML = tich;
+    }
+</script>
+</body>
+</html>

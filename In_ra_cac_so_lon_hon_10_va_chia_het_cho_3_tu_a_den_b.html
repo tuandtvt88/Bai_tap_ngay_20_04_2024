@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <h2>In ra các số >10 và chia hết cho 3 từ a đến b</h2>
+    <input type="number" id="a" placeholder="Nhập a"><br><br>
+    <input type="number" id="b" placeholder="Nhập b"><br><br>
+    <button onclick="ketqua()">Kết quả</button>
+    <p id="kq"></p>
+</head>
+<body>
+    <script>
+        function ketqua(){
+            let a =+document.getElementById('a').value;
+            let b =+document.getElementById('b').value;
+            let ketqua1 = false;
+            document.getElementById('kq').innerHTML ='' //Xóa kết quả cũ
+            for (let i =a;i<=b;i++){
+                if (i>10 && i%3 ==0){
+                    document.getElementById('kq').innerHTML += 'các số >10 và chia hết cho 3 từ' +a+' đến '+ b +' là ' +i +'<br>';
+                    ketqua1 =true;
+                }
+            }
+            if (!ketqua1) {
+                document.getElementById('kq').innerHTML ='Không có số nào thõa mãn'
+            }
+        }
+    </script>
+</body>
+</html>
